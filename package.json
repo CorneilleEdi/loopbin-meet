@@ -1,0 +1,14 @@
+{
+  "name": "loopbin-meet",
+  "version": "1.0.0",
+  "description": "The new and improve Loopbin Meet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CorneilleEdi",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
