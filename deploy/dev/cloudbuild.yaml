@@ -1,0 +1,13 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "$_IMAGE",
+      "-f", "$_DOCKERFILE_PATH",
+      "--build-arg", "APP_VERSION=$_VERSION",
+      "--no-cache",
+      "." ]
+
+images:
+  - "$_IMAGE"
+logsBucket: "gs://builds-logs.gcp.loopbin.dev"

@@ -1,0 +1,23 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ dev ]
+
+env:
+  IN_PRODUCTION: false
+  BASE_URL: https://meet.loopbin.dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v1"
+        with:
+          version: ">= 426.0.0"
+
+      - name: "Use gcloud CLI"
+        run: 'gcloud info'
